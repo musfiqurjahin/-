@@ -1,3 +1,4 @@
+
 /*Styles for Loader:*/
 body.loading {
     overflow: hidden;
@@ -30,9 +31,7 @@ body.loading {
 .main-content {
     display: none;
 }
-
-/*==================================================END=============================================================================================*/
-
+/****************************************?
 
 /* Universal styling to all elements: */
 * {
@@ -42,8 +41,7 @@ body.loading {
     font-family: 'VT323', monospace;
     text-decoration: none;
 }
-
-/*==================================================END=============================================================================================*/
+/*****************************************/
 
 /* Body styling: */
 body {
@@ -53,17 +51,16 @@ body {
     animation: gradient 15s ease infinite;
     background-size: 400% 400%;
 }
-
-/*==================================================END=============================================================================================*/
+/*************************************************************************/
 
 /* Hero header section: */
 .hero-header {
     width: 100%;
     height: 100%;
     min-height: 100vh;
-    background: linear-gradient(90deg, #000000, #000000, #000000);
+ /* background: linear-gradient(90deg, #000000, #000000, #000000);
     animation: gradient 30s ease infinite;
-    background-size: 400% 400%;
+    background-size: 400% 400%;*/
 }
 /* Keyframe animation for the gradient background */
 @keyframes gradient {
@@ -71,8 +68,7 @@ body {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
-
-/*==================================================END=============================================================================================*/
+/*************************************************************************/
 
 /* Wrapper for content with centered alignment and padding: */
 .wrapper {
@@ -81,8 +77,7 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
-
-/*==================================================END=============================================================================================*/
+/**************************************************************************/
 
 /* Header styling: */
 header {
@@ -92,9 +87,7 @@ header {
     align-items: center;
     flex-wrap: wrap;
 }
-
-/*==================================================END=============================================================================================*/
-
+/****************************************************************************/
 
 /* Logo styling: */
 .logo {
@@ -103,7 +96,6 @@ header {
     align-items: center;
     overflow: hidden;
 }
-
 /* Image inside the logo: */
 .logo-img {
     height: 45px;
@@ -113,20 +105,17 @@ header {
     margin-right: 5px;
     transition: transform 0.3s ease;
 }
-
 /* Hover effect for the logo image: */
 .logo:hover .logo-img {
     transform: scale(1.2); /*120% on hover */
 }
-
 /* Logo text styling */
 .logo .logo-text {
     font-size: 24px;
     font-weight: 500;
     color: #00ff00;
 }
-
-/*==================================================END=============================================================================================*/
+/**********************************************************/
 
 /* Toggle button for mobile navigation (hidden by default): */
 nav .togglebtn {
@@ -139,7 +128,6 @@ nav .togglebtn {
     cursor: pointer;
     display: none;
 }
-
 /* Styling for the hamburger menu lines: */
 nav .togglebtn span {
     display: block;
@@ -150,18 +138,15 @@ nav .togglebtn span {
     transition: 0.3s;
     transition-property: transform, opacity;
 }
-
 /* Navigation links list: */
 nav .navlinks {
     list-style-type: none;
 }
-
 /* Individual navigation link item: */
 nav .navlinks li {
     display: inline-block;
     position: relative;
 }
-
 /* Styling for the navigation link: */
 nav .navlinks li a {
     color: #00ff00;
@@ -171,9 +156,6 @@ nav .navlinks li a {
     padding: 5px 10px;
     transition: color 0.3s ease-in-out;
 }
-
-/*==================================================END=============================================================================================*/
-
 /* Pseudo-elements for the hover underline effect: */
 nav .navlinks li a::before,
 nav .navlinks li a::after {
@@ -186,31 +168,26 @@ nav .navlinks li a::after {
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
 }
-
 /* Positioning of the top underline: */
 nav .navlinks li a::before {
     top: 0;
     transform-origin: right;
 }
-
 /* Positioning of the bottom underline: */
 nav .navlinks li a::after {
     bottom: 0px; 
     transform-origin: left; 
 }
-
 /* Hover effect for the navigation link underlines: */
 nav .navlinks li a:hover::before,
 nav .navlinks li a:hover::after {
     transform: scaleX(1); /* Expands the underlines to full width */
 }
-
 /* Hover effect to change the link color: */
 nav .navlinks li a:hover {
     color: #ff1100;
 }
-
-/*==================================================END=============================================================================================*/
+/***********************************************************************/
 
 /* Container for hero section content: */
 .container {
@@ -232,7 +209,6 @@ nav .navlinks li a:hover {
     transition: filter 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
     cursor: url(''), not-allowed; /* Custom cursor image */
 }
-
 .hero-pic img {
     height: 100%;
     width: 100%;
@@ -248,41 +224,36 @@ nav .navlinks li a:hover {
 .hero-pic img:hover {
     transform: scale(1);
 }
-
 /* Text section within the hero container */
 .hero-text {
     max-width: 500px;
     display: flex;
     flex-direction: column;
 }
-
 /* Paragraph text styling in the hero section */
 .hero-text p {
     color: #00ff00;
     font-size: 1.1rem;
 }
-/*==================================================END=============================================================================================*/
+/****************************************************/
 
 /* Styling for the small headline text: */
 .hero-text h5 {
     color: #00ff00;
     font-size: 1.2rem;
 }
-
 /* Styling for the highlighted text inside the small headline: */
 .hero-text h5 span {
     color: #ff0000;
     font-size: 1.5rem;
 }
-
 /* Styling for the main headline text: */
 .hero-text h1 {
     color: #00ff33;
-    font-size: 3rem;
+    font-size: 5vw;
     word-spacing: -0.2em; /*space between words */
 }
-
-/*==================================================END=============================================================================================*/
+/**************************************************************/
 
 /* Styling for the verified badge next to the name: */
 .verified-badge {
@@ -294,7 +265,6 @@ nav .navlinks li a:hover {
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
-
 /* Bouncing animation for the verified badge when clicked: */
 .verified-badge:active {
     animation: bounce 0.4s ease-in-out;
@@ -314,10 +284,10 @@ nav .navlinks li a:hover {
         transform: scale(1); /* Returns to the original size */
     }
 }
-
-/*==================================================END=============================================================================================*/
+/******************************************************************/
 
 /*Animated Text Styles: */
+/* Animated Text Styles: */
 svg {
     display: block;
     font: 7em 'Montserrat';
@@ -338,42 +308,42 @@ svg {
 }
 
 .text-copy:nth-child(1){
-	stroke: #ff0000;
-	animation-delay: -1s;
+    stroke: #ff0000;
+    animation-delay: -1s;
 }
 
 .text-copy:nth-child(2){
-	stroke: #00ff00;
-	animation-delay: -2s;
+    stroke: #00ff00;
+    animation-delay: -2s;
 }
 
 .text-copy:nth-child(3){
-	stroke: #ff0000;
-	animation-delay: -3s;
+    stroke: #ff0000;
+    animation-delay: -3s;
 }
 
 .text-copy:nth-child(4){
-	stroke: #00ff00;
-	animation-delay: -4s;
+    stroke: #00ff00;
+    animation-delay: -4s;
 }
 
 .text-copy:nth-child(5){
-	stroke: #ff0000;
-	animation-delay: -5s;
+    stroke: #ff0000;
+    animation-delay: -5s;
 }
 
 @keyframes stroke-offset {
-	100% { stroke-dashoffset: -35%; }
+    0% { stroke-dashoffset: 0%; }
+    100% { stroke-dashoffset: -35%; }
 }
 
-/*For Animated Text*/
-@media (max-width: 768px) {
+@media(max-width: 600px) {
     svg {
-        font-size: 4em; /* Adjust as needed */
-        margin-top: -50px; /* Adjust as needed */
+        font: 5em 'Montserrat';
+        height: 150px;
     }
 }
-
+/*******************************************/
 
 /* Adjustments for Skill styles: */
 .skills-section {
@@ -471,8 +441,7 @@ svg {
 .btn:hover {
     background-color: #45a049;
 }
-
-/*==================================================END=============================================================================================*/
+/**********************************************************************/
 
 /* Button group container: */
 .btn-group {
@@ -506,9 +475,7 @@ svg {
 .btn.active {
     border-color: #00ff00;
 }
-
-/*==================================================END=============================================================================================*/
-
+/****************************************************************/
 /* Social media link styling */
 .hero-text .social a {
     color: #00ff00;
@@ -522,10 +489,9 @@ svg {
     color: #ff0000; 
     transform: none; 
 }
+/**************************************************/
 
-/*==================================================END=============================================================================================*/
-
-/* Media query for screens 930px wide or less: */
+/* Media query for screens 900px wide or less: */
 @media(max-width:930px) {
     nav .togglebtn {
         display: initial;
@@ -583,21 +549,17 @@ svg {
         text-align: center;
     }
 
-    /*for h1 Text */
-    .hero-text h1 {
-        color: #00ff33;
-        font-size: 2rem;
-        word-spacing: -0.2em; /*space between words */
-    }
-
-    /*For Animated Text*/
-    svg {
-        font-size: 4em; 
-        margin-top: -50px;
+    .verified-badge {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+        margin-left: -2px;
+        position: relative;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
     }
 }
-
-/*==================================================END=============================================================================================*/
+/******************************************************/
 
 /* Custom scrollbar for WebKit browsers: */
 ::-webkit-scrollbar {
@@ -622,8 +584,7 @@ svg {
 ::-webkit-scrollbar-track {
     background-color: #000;
 }
-
-/*==================================================END=============================================================================================*/
+/***********************************************************/
 
 /* Class to lock scrolling: */
 .no-scroll {
@@ -631,8 +592,7 @@ svg {
     position: fixed;
     width: 100%;
 }
-
-/*==================================================END=============================================================================================*/
+/***********************************************************/
 
 /* Media query for screens 1000px wide or less: */
 @media(max-width:1000px) {
@@ -692,36 +652,18 @@ svg {
     nav .navlinks.open {
         transform: translateY(0);
     }
-
-    /*For Verified Badge*/
-    .verified-badge {
-        width: 20px;
-        height: 20px;
-        vertical-align: middle;
-        margin-left: -2px;
-        position: relative;
-        cursor: pointer;
-        transition: transform 0.2s ease-in-out;
+    .container .hero-pic {
+    width: 250px;
+    height: 250px;
     }
-
-    /*for h1 Text */
-    .hero-text h1 {
-        color: #00ff33;
-        font-size: 2rem;
-        word-spacing: -0.2em; /*space between words */
-    }
-
-    .hero-pic {
-        height: 250px;
-        width: 250px;
-        margin: 0 auto;
-        align-items: center;
-    }
-
-    /*For Animated Text*/
     svg {
-        font-size: 4em; /* Adjust as needed */
-        margin-top: -50px; /* Adjust as needed */
+        display: block;
+        font: 20vw 'Montserrat';
+        width: 100%;
+        height: 200px;
+        margin: 0 auto;
+        margin-top: -100px;
+        text-align: center;
     }
 }
 
@@ -740,10 +682,7 @@ svg {
     }
 
     .hero-pic {
-        height: 250px;
-        width: 250px;
         margin: 0 auto;
-        align-items: center;
     }
 
     .btn-group {
@@ -760,39 +699,12 @@ svg {
         margin-right: 20px;
     }
 
-    /*For Verified Badge*/
-    .verified-badge {
-        width: 20px;
-        height: 20px;
-        vertical-align: middle;
-        margin-left: -2px;
-        position: relative;
-        cursor: pointer;
-        transition: transform 0.2s ease-in-out;
-    }
-
-    /*for h1 Text */
-    .hero-text h1 {
-        color: #00ff33;
-        font-size: 2rem;
-        word-spacing: -0.2em; /*space between words */
-    }
-
     .container .hero-pic {
         width: 250px;
         height: 250px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /*For Animated Text*/
-    svg {
-        font-size: 4em; /* Adjust as needed */
-        margin-top: -50px; /* Adjust as needed */
     }
 }
-
-/*==================================================END=============================================================================================*/
+/*********************************************************/
 
 /* Social Media Icons Wrapper: */
 .wrapper-social {
@@ -972,7 +884,7 @@ svg {
     color: red;
   }
 */
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     .wrapper-social {
         display: flex;
         flex-wrap: wrap;
@@ -996,11 +908,11 @@ svg {
         top: -40px;
     }
 }
-/*========================END======================*/
+/************************************************/
 
 /* Footer Styles */
 footer {
-    background-color: #000000; /* Dark background for footer */
+  /*background-color: #000000; /* Dark background for footer */
     color: #00ff11; /* White text color */
     padding: 30px 0; /* Increased padding */
     text-align: center;
@@ -1073,3 +985,235 @@ footer {
     animation: glitch 0.6s ease-out; /* Glitch effect on click */
     transform: scale(1.3); /* Zoom-in effect */
 }
+/*******************************************************/
+
+/*CSS for Project.htm:*/
+.projects-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+    gap: 20px; /* Adjusts the spacing between grid items */
+}
+
+.project-card {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items horizontally within the card */
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
+}
+
+.project-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover; /* Ensures the image covers the container while maintaining its aspect ratio */
+}
+
+.project-details {
+    margin-top: 10px;
+    text-align: center; /* Centers text within the project details */
+}
+.view-btn {
+    background-color: #01be01;
+    color: #000000;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    font-size: 18px;
+    margin-right: 10px;
+    display: inline-block;
+    }
+    .view-btn:hover {
+            color: #ffffff;
+            background-color: #d00b0b;
+        }
+
+/* Media Query for Small Display Devices */
+        @media (max-width: 768px) {
+            .projects-wrapper {
+                grid-template-columns: repeat(1, 1fr); /* Stacks items in a single column for smaller screens */
+            }
+            .project-card {
+                flex-direction: column;
+                align-items: center;
+            }
+            .project-img {
+                width: 200px;
+                height: 200px;
+                border-radius: 10px;
+                object-fit: cover;
+                margin-bottom: 20px;
+            }
+            .project-details h3 {
+                margin-top: 10px;
+            }
+            .view-btn {
+                margin-right: 0;
+                margin-bottom: 10px;
+                display: block;
+                text-align: center;
+            }
+        }
+
+        /* Class to lock scrolling */
+        .no-scroll {
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+        }
+
+/******************************************/
+
+/*CSS for blog.htm:*/
+.blog-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.blog-hero-header {
+    background: #121212;
+    padding: 10px;
+}
+.blog-logo-img {
+    height: 50px;
+}
+.blog-nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.blog-nav ul li {
+    margin-right: 20px;
+}
+.blog-nav ul li a {
+    color: #00ff00;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+.blog-nav ul li a:hover {
+    color: #008000;
+}
+.blog-container {
+    margin-top: 30px;
+    padding: 20px;
+    background: #1c1c1c;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+.blog-post {
+    background: #222;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
+}
+.blog-post h2 {
+    margin-top: 0;
+    color: #ff0000;
+}
+.blog-post p {
+    color: #04ff00;
+    line-height: 1.5;
+}
+.blog-post img {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    display: block;
+    margin: 10px 0;
+    border-radius: 10px;
+    transition: filter 0.3s ease-in-out;
+    filter: grayscale(100%);
+}
+.blog-post img:hover {
+   filter: grayscale(0%);
+}
+.blog-post .actions {
+    margin-top: 15px;
+}
+.blog-post .actions span {
+    margin-right: 15px;
+    font-size: 14px;
+    color: #00ff11;
+    display: inline-block;
+    vertical-align: middle;
+}
+.blog-post .actions span i {
+    margin-right: 5px;
+    color: #00ff00;
+}
+.blog-post .actions span.likes:hover i,
+.blog-post .actions span.reposts:hover i {
+    color: #ff0000;
+}
+
+.time-date-display {
+    color: #00ff00;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.time-date-display span {
+    display: block;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: #00ff00;
+    cursor: pointer;
+    font-size: 16px;
+    display: none;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.show-less-btn {
+    background: none;
+    border: none;
+    color: #00ff00;
+    cursor: pointer;
+    font-size: 16px;
+    display: none;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.blog-post.collapsed .blog-content {
+    max-height: 3.6em; /* Height for 3 lines */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.blog-post.collapsed p {
+    max-height: 3.6em; /* Height for 3 lines */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.blog-post.collapsed .read-more-btn {
+    display: inline;
+}
+/***************************************************/
