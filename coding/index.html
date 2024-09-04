@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Musfiqur_Jahin>_ Coding</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="Favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="Favicon/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="icon" href="Favicon/favicon.ico">
+    <link rel="manifest" href="Favicon/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="root_modules/CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<style>
+    body {
+        background-color: #000; /* Black background */
+        color: #00ff00; /* Green text color */
+        font-family: 'VT323', monospace;
+        margin: 0;
+        padding: 0;
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 20px;
+    }
+
+    #code-editor {
+        width: 80%;
+        height: 300px;
+        border: 2px solid #00ff00;
+        border-radius: 10px;
+        padding: 15px;
+        background-color: #111; /* Dark background for editor */
+        color: #00ff00; /* Green text color */
+        font-family: 'VT323', monospace;
+        resize: none;
+        overflow: auto;
+        margin-bottom: 20px;
+    }
+
+    #run-button {
+        padding: 10px 30px;
+        background-color: #00ff00; /* Green button color */
+        color: #000; /* Black text color */
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 20px;
+        font-family: 'VT323', monospace;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    }
+
+    #run-button:hover {
+        background-color: #00cc00; /* Darker green on hover */
+    }
+
+    #output {
+        width: 85%;
+        height: 300px;
+        border: 2px solid #00ff00;
+        border-radius: 10px;
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #111; /* Dark background for output */
+        color: #00ff00; /* Green text color */
+        display: none; /* Initially hidden */
+    }
+</style>
+</head>
+<body>
+     <!-- Loader HTML -->
+ <div class="loader-container" id="loader">
+    <img src="root_modules/Images/Loader.png/Loader.png" alt="Loader Image" class="loader-image">
+</div>
+<!--End of Loader HTML-->
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <a href="home.html"><img src="root_modules/Images/Logo.jpg/Logo.jpg" alt="Logo" class="logo-img"></a>
+                    <div class="logo-text"></div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="code-runner.htm"><i class="fas fa-code"></i> Coding</a></li>
+                        <li><a href="404-Error.htm"><i class="fas fa-laptop-code"></i> Terminal</a></li>
+                        <li><a href="blogs.htm"><i class="fas fa-blog"></i> Blog</a></li>
+                        <li><a href="messenger.htm"><i class="fab fa-facebook-messenger"></i> Send Message</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+<div id="container">
+    <textarea id="code-editor" placeholder="Write your HTML, CSS, or JavaScript code here..."></textarea>
+    <button id="run-button"> Run </button>
+    <iframe id="output"></iframe>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script src="root_modules/JavaScript/app.js"></script>
+
+<script>
+    document.getElementById('run-button').addEventListener('click', function() {
+        var code = document.getElementById('code-editor').value;
+        var output = document.getElementById('output');
+        output.style.display = 'block'; // Show the output
+        output.contentWindow.document.open();
+        output.contentWindow.document.write(code);
+        output.contentWindow.document.close();
+    });
+</script>
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024; All rights reserved.</p>
+        <p>Developed by <a href="home.html" class="developer-link">me</a> 
+        <img src="root_modules/Images/Anonymous.img/Red_Mask-2.png" alt="Developer Badge" class="developer-badge"></p>
+    </div>
+</footer>
+<!-- End of Footer HTML -->
+</body>
+</html>
