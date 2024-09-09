@@ -262,31 +262,64 @@ nav .navlinks li a:hover {
     vertical-align: middle;
     margin-left: -2px;
     position: relative;
-    cursor: pointer;
     transition: transform 0.2s ease-in-out;
+    cursor: pointer;
 }
-/* Bouncing animation for the verified badge when clicked: */
+/* Tooltip container */
+.verified-badge-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Hidden text that will show on hover/click */
+.verified-text {
+    visibility: hidden;
+    background-color: rgb(0, 0,0,o.8);
+    color: #ff0000;
+    text-align: center;
+    font-size: 15px ;
+    padding: 5px;
+    border: 2px solid green;
+    border-radius: 10px;
+    position: absolute;
+    top: -40px; /* Adjust to position the text above the badge */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Show the text on hover or click */
+.verified-badge:hover + .verified-text,
+.verified-badge:active + .verified-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Bouncing animation for the verified badge when clicked */
 .verified-badge:active {
     animation: bounce 0.4s ease-in-out;
 }
-/* Keyframes for the bounce animation: */
+
+/* Keyframes for the bounce animation */
 @keyframes bounce {
     0% {
-        transform: scale(1); /* Starts at the original size */
+        transform: scale(1);
     }
     30% {
-        transform: scale(1.3); /* Scales up slightly */
+        transform: scale(1.3);
     }
     50% {
-        transform: scale(0.9); /* Shrinks slightly */
+        transform: scale(0.9);
     }
     100% {
-        transform: scale(1); /* Returns to the original size */
+        transform: scale(1);
     }
 }
+
 /******************************************************************/
 
-/*Animated Text Styles: */
 /* Animated Text Styles: */
 svg {
     display: block;
