@@ -4,42 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
-    <style>
-        .loader-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        .loader-image {
-            width: 150px;
-            animation: zoomInOut 1.5s infinite;
-        }
-        @keyframes zoomInOut {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.2);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-    </style>
     <script>
-        setTimeout(function() {
-            window.location.href = "home/";
-        }, 3000); // 3 seconds delay
+        // Redirect to home/index.htm
+        window.location.href = "home/";
     </script>
 </head>
 <body>
-    <div class="loader-container">
-        <img src="Favicon/favicon.png" alt="Loading..." class="loader-image">
-    </div>
-
-    <!-- Fallback text in case the redirect fails -->
-    <p style="text-align:center;">If you are not redirected, <a href="home/">click here</a>.</p>
-
+    <p>If you are not redirected, <a href="home/">{click here}</a>.</p>
 </body>
 </html>
