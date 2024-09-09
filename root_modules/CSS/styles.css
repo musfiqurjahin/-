@@ -700,13 +700,13 @@ svg {
     }
     .hero-text h1 {
         color: #00ff33;
-        font-size: 1em;
+        font-size: 2em;
         word-spacing: -0.2em; /*space between words */
     }
 }
 
 /* Media query for screens 999px wide or less: */
-@media(max-width: 999px) {
+@media(max-width: 700px) {
     .container {
         flex-direction: column;
         padding-top: 2rem;
@@ -743,7 +743,7 @@ svg {
     }
     .hero-text h1 {
         color: #00ff33;
-        font-size: 1em;
+        font-size: 2em;
         word-spacing: -0.2em; /*space between words */
     }
 }
