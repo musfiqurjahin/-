@@ -3,28 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Musfiqur Jahin</title>
-    <link rel="stylesheet" href="root_modules/CSS/styles.css">
+    <title>Main Index</title>
+    <link rel="stylesheet" href="root_modules/CSS/styles.css"> <!-- Your CSS link -->
 </head>
 <body>
+    <!-- Container where home/index.htm content will be loaded -->
     <div id="home-content"></div>
 
     <script>
-        // Fetch the content of home/index.htm and insert it into the div
-        fetch('home/index.htm')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not OK');
-                }
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('home-content').innerHTML = data;
-            })
-            .catch(error => {
-                console.error('Error fetching the home page:', error);
-            });
+        // Create a new XMLHttpRequest object
+        var xhr = new XMLHttpRequest();
+
+        // Configure it: GET-request for the home/index.htm file
+        xhr.open('GET', 'home/index.htm', true);
+
+        // Set the callback function to run when the request is complete
+        xhr.onload = function() {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                // If the request is successful, insert the response (HTML) into the div
+                document.getElementById('home-content').innerHTML = xhr.responseText;
+            } else {
+                console.error('Error loading the home page: ' + xhr.status);
+            }
+        };
+
+        // Handle errors
+        xhr.onerror = function() {
+            console.error('Request failed');
+        };
+
+        // Send the request
+        xhr.send();
     </script>
-    <script src="root_modules/JavaScript/app.js"></script>
 </body>
 </html>
