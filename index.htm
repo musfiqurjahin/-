@@ -1,12 +1,29 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Musfiqur Jahin</title>
+    <title>Main Index</title>
+    <link rel="stylesheet" href="root_modules/CSS/styles.css">
 </head>
 <body>
-    <iframe src="home/index.htm" width="100%" height="1000px" style="border:none;"></iframe>
+    <div id="home-content"></div>
+
+    <script>
+        // Fetch the content of home/index.htm and insert it into the div
+        fetch('home/index.htm')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not OK');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('home-content').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error fetching the home page:', error);
+            });
+    </script>
 </body>
 </html>
