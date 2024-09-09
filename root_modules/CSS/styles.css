@@ -254,6 +254,7 @@ nav .navlinks li a:hover {
     word-spacing: -0.2em; /*space between words */
 }
 /**************************************************************/
+
 /* Styling for the verified badge next to the name: */
 .verified-badge {
     width: 30px;
@@ -292,7 +293,7 @@ nav .navlinks li a:hover {
 /* Show the text on hover or click */
 .verified-badge:hover + .verified-text,
 .verified-badge:active + .verified-text {
-    visibility: visible;
+    visibility: hidden;
     opacity: 1;
 }
 
@@ -304,18 +305,19 @@ nav .navlinks li a:hover {
 /* Keyframes for the bounce animation */
 @keyframes bounce {
     0% {
-        transform: scale(1); /* Starts at the original size */
+        transform: scale(1);
     }
     30% {
-        transform: scale(1.3); /* Scales up slightly */
+        transform: scale(1.3);
     }
     50% {
-        transform: scale(0.9); /* Shrinks slightly */
+        transform: scale(0.9);
     }
     100% {
-        transform: scale(1); /* Returns to the original size */
+        transform: scale(1);
     }
 }
+
 /******************************************************************/
 
 /* Animated Text Styles: */
