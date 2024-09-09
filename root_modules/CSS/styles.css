@@ -282,7 +282,7 @@ nav .navlinks li a:hover {
     border: 2px solid green;
     border-radius: 10px;
     position: absolute;
-    top: -20px; /* Adjust to position the text above the badge */
+    top: -30px; /* Adjust to position the text above the badge */
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
