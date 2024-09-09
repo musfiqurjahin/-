@@ -583,8 +583,8 @@ svg {
     }
 
     .verified-badge {
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
         vertical-align: middle;
         margin-left: -2px;
         position: relative;
@@ -698,6 +698,11 @@ svg {
         margin-top: -100px;
         text-align: center;
     }
+    .hero-text h1 {
+        color: #00ff33;
+        font-size: 3em;
+        word-spacing: -0.2em; /*space between words */
+    }
 }
 
 /* Media query for screens 999px wide or less: */
@@ -735,6 +740,11 @@ svg {
     .container .hero-pic {
         width: 250px;
         height: 250px;
+    }
+    .hero-text h1 {
+        color: #00ff33;
+        font-size: 3em;
+        word-spacing: -0.2em; /*space between words */
     }
 }
 /*********************************************************/
