@@ -293,7 +293,7 @@ nav .navlinks li a:hover {
 /* Show the text on hover or click */
 .verified-badge:hover + .verified-text,
 .verified-badge:active + .verified-text {
-    visibility: hidden;
+    visibility: visible;
     opacity: 1;
 }
 
