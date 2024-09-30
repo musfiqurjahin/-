@@ -15,68 +15,7 @@
     <link rel="stylesheet" href="../root_modules/CSS/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-<style>
-    body {
-        background-color: #000; /* Black background */
-        color: #00ff00; /* Green text color */
-        font-family: 'VT323', monospace;
-        margin: 0;
-        padding: 0;
-    }
-
-    #container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        padding: 20px;
-    }
-
-    #code-editor {
-        width: 80%;
-        height: 300px;
-        border: 2px solid #00ff00;
-        border-radius: 10px;
-        padding: 15px;
-        background-color: #111; /* Dark background for editor */
-        color: #00ff00; /* Green text color */
-        font-family: 'VT323', monospace;
-        resize: none;
-        overflow: auto;
-        margin-bottom: 20px;
-    }
-
-    #run-button {
-        padding: 10px 30px;
-        background-color: #00ff00; /* Green button color */
-        color: #000; /* Black text color */
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        font-size: 20px;
-        font-family: 'VT323', monospace;
-        text-transform: uppercase;
-        transition: background-color 0.3s ease;
-        box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
-    }
-
-    #run-button:hover {
-        background-color: #00cc00; /* Darker green on hover */
-    }
-
-    #output {
-        width: 85%;
-        height: 300px;
-        border: 2px solid #00ff00;
-        border-radius: 10px;
-        margin-top: 20px;
-        padding: 15px;
-        background-color: #111; /* Dark background for output */
-        color: #00ff00; /* Green text color */
-        display: none; /* Initially hidden */
-    }
-</style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
      <!-- Loader HTML -->
@@ -115,18 +54,8 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
-    <script src="../root_modules/JavaScript/app.js"></script>
-
-<script>
-    document.getElementById('run-button').addEventListener('click', function() {
-        var code = document.getElementById('code-editor').value;
-        var output = document.getElementById('output');
-        output.style.display = 'block'; // Show the output
-        output.contentWindow.document.open();
-        output.contentWindow.document.write(code);
-        output.contentWindow.document.close();
-    });
-</script>
+<script src="../root_modules/JavaScript/app.js"></script>
+<script src="script.js"></script>
 <footer>
     <div class="footer-content">
         <p>&copy; 2024; All rights reserved.</p>
